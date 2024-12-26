@@ -18,6 +18,21 @@
         function hashOne(name, surname){
             return name.charAt(0) + surname.charAt(1);
         }
+
+        function stringToNumber(strng){
+            let hashcode = 0;
+            for(let i = 0; i < strng.length; i++){
+                hashcode += strng.charCodeAt(i);
+            }
+            return hashcode;
+        }
+
+        function hash(name, surname){
+            let word = stringToNumber(name) + stringToNumber(surname);
+            return word;
+        }
+
+
     </script>
 </body>
 </html>
